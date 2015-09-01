@@ -3,19 +3,11 @@ var canvas = document.getElementById('canvas'),
 
 var currentImage = 0;
 
-function pausecomp(millis)
- {
-  var date = new Date();
-  var curDate = null;
-  do { curDate = new Date(); }
-  while(curDate-date < millis);
-}
-
 var img = new Image();
 img.onload = function(){
   drawFireball();
 }
-img.src = 'fireball_sprite.png';
+img.src = './fireball_sprite.png';
 
 fireballs = fireballJSON.map(function(sprite){
   return {
